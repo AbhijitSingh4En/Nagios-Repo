@@ -20,4 +20,6 @@ systemctl enable httpd.service
 make install-commandmode
 make install-config
 make install-webconf
-htpasswd -c /usr/local/nagios/etc/htpasswd.users nagiosadmin
+htpasswd -b -c /usr/local/nagios/etc/htpasswd.users nagiosadmin Redhat@1234
+systemctl enable --now httpd.service
+systemctl enable --now nagios.service
